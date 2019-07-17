@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec983a3_1bedb242",
+        "filename": "ansible-config_template.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2019-07-17T16:38:23Z",
+      "side": 1,
+      "message": "We can reuse the above srcname",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 40
+      },
+      "revId": "f5021a9802ce625dd341387bcec4d223cb365405",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "93d9ebdc_883c162b",
+        "filename": "ansible-config_template.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2019-07-17T16:38:23Z",
+      "side": 1,
+      "message": "ansible-config_template",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 39
+      },
+      "revId": "f5021a9802ce625dd341387bcec4d223cb365405",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57656887_98bff1ca",
+        "filename": "ansible-config_template.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2019-07-17T16:38:23Z",
+      "side": 1,
+      "message": "not needed",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 39
+      },
+      "revId": "f5021a9802ce625dd341387bcec4d223cb365405",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d7b8074_2f42bed7",
+        "filename": "ansible-config_template.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2019-07-17T16:38:23Z",
+      "side": 1,
+      "message": "%{srcname}",
+      "range": {
+        "startLine": 64,
+        "startChar": 17,
+        "endLine": 64,
+        "endChar": 29
+      },
+      "revId": "f5021a9802ce625dd341387bcec4d223cb365405",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
