@@ -1,3 +1,8 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit faf60ddb53dd3d345ea3644f818805a3d356b104
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global pyver %{python3_pkgversion}
@@ -12,16 +17,14 @@
 
 %global srcname ansible-config_template
 
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
-
 Name:           %{srcname}
-Version:        XXX
-Release:        XXX
+Version:        1.0.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Ansible plugin for config template
 
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/%{srcname}
-Source0:        https://tarballs.openstack.org/%{srcname}/%{srcname}-%{upstream_version}.tar.gz
+Source0:        https://github.com/openstack/%{srcname}/archive/%{commit}.tar.gz#/%{srcname}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  git
@@ -62,3 +65,6 @@ export SKIP_PIP_INSTALL=1
 
 
 %changelog
+* Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 1.0.0-1.faf60ddbgit.el7
+- Update to post 1.0.0 (faf60ddb53dd3d345ea3644f818805a3d356b104)
+
