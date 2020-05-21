@@ -4,13 +4,13 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           %{srcname}
-Version:        XXX
-Release:        XXX
+Version:        1.1.0
+Release:        1%{?dist}
 Summary:        Ansible plugin for config template
 
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/%{srcname}
-Source0:        https://tarballs.openstack.org/%{srcname}/%{srcname}-%{upstream_version}.tar.gz
+Source0:        https://github.com/openstack/%{srcname}/archive/%{upstream_version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  git
@@ -46,3 +46,6 @@ export SKIP_PIP_INSTALL=1
 
 
 %changelog
+* Thu May 21 2020 RDO <dev@lists.rdoproject.org> 1.1.0-1
+- Update to 1.1.0
+
