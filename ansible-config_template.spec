@@ -1,31 +1,24 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit bd7543a73681f16e20d5562291b8f545fc4fb904
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 
 %global srcname ansible-config_template
 
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
-
 Name:           %{srcname}
-Version:        XXX
-Release:        XXX
+Version:        1.2.1
+Release:        1%{?alphatag}%{?dist}
 Summary:        Ansible plugin for config template
 
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/%{srcname}
-Source0:        https://tarballs.openstack.org/%{srcname}/%{srcname}-%{upstream_version}.tar.gz
-# Required for tarball sources verification
-%if 0%{?sources_gpg} == 1
-Source101:        https://tarballs.openstack.org/%{srcname}/%{srcname}-%{upstream_version}.tar.gz.asc
-Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
-%endif
+Source0:        https://github.com/openstack/%{srcname}/archive/%{commit}.tar.gz#/%{srcname}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
-# Required for tarball sources verification
-%if 0%{?sources_gpg} == 1
-BuildRequires:  /usr/bin/gpgv2
-BuildRequires:  openstack-macros
-%endif
 BuildRequires:  git-core
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -38,10 +31,6 @@ Requires:       (python3dist(ansible) or ansible-core >= 2.11)
 Ansible plugin for config template
 
 %prep
-# Required for tarball sources verification
-%if 0%{?sources_gpg} == 1
-%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
-%endif
 %autosetup -n %{srcname}-%{upstream_version} -S git
 
 
@@ -63,3 +52,5 @@ export SKIP_PIP_INSTALL=1
 
 
 %changelog
+* Fri Apr 15 2022 Joel Capitao <jcapitao@redhat.com> - 1.2.1-1.bd7543a7git
+- Update to post 1.2.1 (bd7543a73681f16e20d5562291b8f545fc4fb904)
