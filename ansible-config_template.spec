@@ -63,3 +63,4 @@ export SKIP_PIP_INSTALL=1
 
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ansible-config_template/commit/bb1d445a08e4a2dccb3503625199c9d11368adda
