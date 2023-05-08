@@ -63,8 +63,6 @@ export SKIP_PIP_INSTALL=1
 %{pyver_sitelib}/ansible_config_template*.egg-info
 %{_datadir}/ansible/
 
-
 %changelog
 * Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 1.0.0-1.faf60ddbgit.el7
 - Update to post 1.0.0 (faf60ddb53dd3d345ea3644f818805a3d356b104)
-
