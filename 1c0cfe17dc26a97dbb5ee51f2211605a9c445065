@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "603f6968_1e7ae030",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-05-08T16:04:06Z",
+      "side": 1,
+      "message": "we need to make sure https://review.rdoproject.org/r/c/rdoinfo/+/48500/ is merged and synced in trunk server before merging this (it can take up to 30 minutes after merging in rdoinfo).",
+      "revId": "1c0cfe17dc26a97dbb5ee51f2211605a9c445065",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
