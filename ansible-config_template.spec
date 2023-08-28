@@ -26,10 +26,7 @@ BuildArch:      noarch
 BuildRequires:  /usr/bin/gpgv2
 BuildRequires:  openstack-macros
 %endif
-BuildRequires:  git-core
-BuildRequires:  python3-devel
-BuildRequires:  python3-setuptools
-BuildRequires:  python3-pbr
+BuildRequires:  ansible-packaging
 
 Requires:       (python3dist(ansible) or ansible-core >= 2.11)
 
@@ -42,25 +39,20 @@ Ansible plugin for config template
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -n %{srcname}-%{upstream_version} -S git
-
+%autosetup -n ansible-config_template-%{upstream_version}
+sed -i -e 's/version:.*/version: %{version}/' galaxy.yml
+find -type f ! -executable -name '*.py' -print -exec sed -i -e '1{\@^#!.*@d}' '{}' +
+rm -vrf releasenotes/ examples/ tests/ .gitreview .gitignore doc/
 
 %build
-%{py3_build}
-
+%ansible_collection_build
 
 %install
-export PBR_VERSION=%{version}
-export SKIP_PIP_INSTALL=1
-%{py3_install}
+%ansible_collection_install
 
-
-%files
+%files -f %{ansible_collection_filelist}
 %doc README*
 %license LICENSE
-%{python3_sitelib}/ansible_config_template*.egg-info
-%{_datadir}/ansible/
-
 
 %changelog
 
