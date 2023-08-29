@@ -16,6 +16,24 @@
       "message": "don\u0027t we want to keep this part or is that replaced by the magic in line 54  \"%files -f %{ansible_collection_filelist}\"",
       "revId": "5bb344c55db1a6332e4b1421b2303bf8f5033239",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e933b068_b592897a",
+        "filename": "ansible-config_template.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 717
+      },
+      "writtenOn": "2023-08-29T07:59:45Z",
+      "side": 0,
+      "message": "Exactly.",
+      "parentUuid": "c125a058_5fb29136",
+      "revId": "5bb344c55db1a6332e4b1421b2303bf8f5033239",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
