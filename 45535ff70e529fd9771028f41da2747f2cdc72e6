@@ -1,0 +1,9 @@
+Code-Review+1: Jon Schlueter <jschluet@redhat.com>
+Code-Review+2: Alan Pevec <alan.pevec@redhat.com>
+Workflow+1: Alan Pevec <alan.pevec@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 29 Aug 2023 16:25:25 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ansible-config_template-distgit/+/49752
+Project: openstack/ansible-config_template-distgit
+Branch: refs/heads/rpm-master
