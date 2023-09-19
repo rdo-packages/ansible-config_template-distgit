@@ -1,13 +1,13 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 
 %global srcname ansible-config_template
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           %{srcname}
-Version:        XXX
-Release:        XXX
+Version:        2.0.0
+Release:        1%{?dist}
 Summary:        Ansible plugin for config template
 
 License:        ASL 2.0
@@ -55,4 +55,7 @@ rm -vrf releasenotes/ examples/ tests/ .gitreview .gitignore doc/
 %license LICENSE
 
 %changelog
+* Tue Sep 19 2023 RDO <dev@lists.rdoproject.org> 2.0.0-1
+- Update to 2.0.0
+
 
