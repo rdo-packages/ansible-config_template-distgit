@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b73b4278_f01b7228",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2026-04-02T07:12:22Z",
+      "side": 1,
+      "message": "This is needed to clear FTBFS triggered with https://github.com/openstack/ansible-config_template/commit/52cf193f39547888c2f80181ab23b135ac151252, self approving to clear podified component stuck for a month",
+      "revId": "8ccc653ef809903358a4c70a90e5e6781164d2a4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
